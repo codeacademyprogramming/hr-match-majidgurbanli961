@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CC12D38-2D6E-4A76-93A8-572EF7D20790}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HrMatch</RootNamespace>
+    <AssemblyName>HrMatch</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCv.Designer.cs">
+      <DependentUpon>AddCv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddElan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddElan.Designer.cs">
+      <DependentUpon>AddElan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\HrConnect.cs" />
+    <Compile Include="DB\Model\Cv.cs" />
+    <Compile Include="DB\Model\Education.cs" />
+    <Compile Include="DB\Model\Elan.cs" />
+    <Compile Include="DB\Model\User.cs" />
+    <Compile Include="DB\Model\Work.cs" />
+    <Compile Include="DB\seeCv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB\seeCv.Designer.cs">
+      <DependentUpon>seeCv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnUygunIsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnUygunIsh.Designer.cs">
+      <DependentUpon>EnUygunIsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="IshciMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IshciMain.Designer.cs">
+      <DependentUpon>IshciMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IshverenMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IshverenMain.Designer.cs">
+      <DependentUpon>IshverenMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchIsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchIsh.Designer.cs">
+      <DependentUpon>SearchIsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeeAllELans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeeAllELans.Designer.cs">
+      <DependentUpon>SeeAllELans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeeAllElansIshveren.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeeAllElansIshveren.Designer.cs">
+      <DependentUpon>SeeAllElansIshveren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeeAppliedCvs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeeAppliedCvs.Designer.cs">
+      <DependentUpon>SeeAppliedCvs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeeappliedElan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeeappliedElan.Designer.cs">
+      <DependentUpon>SeeappliedElan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeeSelectedElan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeeSelectedElan.Designer.cs">
+      <DependentUpon>SeeSelectedElan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\Data\EntityState.cs" />
+    <EmbeddedResource Include="AddCv.resx">
+      <DependentUpon>AddCv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddElan.resx">
+      <DependentUpon>AddElan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DB\seeCv.resx">
+      <DependentUpon>seeCv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnUygunIsh.resx">
+      <DependentUpon>EnUygunIsh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IshciMain.resx">
+      <DependentUpon>IshciMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IshverenMain.resx">
+      <DependentUpon>IshverenMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SearchIsh.resx">
+      <DependentUpon>SearchIsh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeeAllELans.resx">
+      <DependentUpon>SeeAllELans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeeAllElansIshveren.resx">
+      <DependentUpon>SeeAllElansIshveren.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeeAppliedCvs.resx">
+      <DependentUpon>SeeAppliedCvs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeeappliedElan.resx">
+      <DependentUpon>SeeappliedElan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeeSelectedElan.resx">
+      <DependentUpon>SeeSelectedElan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
